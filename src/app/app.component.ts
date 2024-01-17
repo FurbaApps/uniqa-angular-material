@@ -37,10 +37,7 @@ export class AppComponent {
   protected hide = true;
 
   // Error
-  protected emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+  protected emailFormControl = new FormControl('', [Validators.required]);
 
   // Autocomplete
   myControl = new FormControl('');

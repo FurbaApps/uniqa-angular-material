@@ -62,7 +62,7 @@
     [formControl]="emailFormControl"
     placeholder="Ex. pat@example.com"
   />
-  <mat-hint>Wprowadź wartość która <strong>nie jest</strong> mejlem</mat-hint>
+  <mat-hint>Wprowadź wartość, a potem ją usuń</mat-hint>
   @if (emailFormControl.hasError('required')) {
   <mat-error>Email is <strong>required</strong></mat-error>
   }
