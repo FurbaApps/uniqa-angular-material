@@ -1,0 +1,19 @@
+:host {
+  padding: 32px;
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 16px;
+
+  mat-form-field {
+    width: 300px;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    margin-top: 32px;
+  }
+}
