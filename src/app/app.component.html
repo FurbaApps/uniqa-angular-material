@@ -32,6 +32,12 @@
   <mat-hint align="end">Hint do prawej, bo tak mogę</mat-hint>
 </mat-form-field>
 
+<h2>Text input z maską</h2>
+<mat-form-field appearance="outline">
+  <mat-label>Data urodzenia</mat-label>
+  <input [maskito]="dateMask" matInput placeholder="03/11/1998" />
+</mat-form-field>
+
 <h2>Password Input</h2>
 <mat-form-field appearance="outline">
   <mat-label>Enter your password</mat-label>

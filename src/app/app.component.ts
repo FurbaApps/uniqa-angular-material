@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
-import { Observable, map, startWith } from 'rxjs';
-
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,6 +11,12 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+
+import { Observable, map, startWith } from 'rxjs';
+import { MaskitoDirective } from '@maskito/angular';
+import { MaskitoOptions } from '@maskito/core';
+import { maskitoDateOptionsGenerator } from '@maskito/kit';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -28,6 +32,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatDatepickerModule,
     MatNativeDateModule,
     MatCheckboxModule,
+    MaskitoDirective,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -58,4 +63,12 @@ export class AppComponent {
       option.toLowerCase().includes(filterValue)
     );
   }
+
+  // Maskito
+  dateMask: MaskitoOptions = maskitoDateOptionsGenerator({
+    mode: 'dd/mm/yyyy',
+    separator: '/',
+    min: new Date(1900, 0, 1),
+    max: new Date(),
+  });
 }
