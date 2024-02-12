@@ -1,4 +1,4 @@
-<h1>Kontrolki</h1>
+<h1>Form Controls</h1>
 <!-- Inputs -->
 <h2>Text input</h2>
 <mat-form-field appearance="outline">
@@ -8,7 +8,7 @@
 
 <mat-form-field appearance="outline">
   <mat-label>Input z ikoną prefix</mat-label>
-  <input matInput placeholder="Ex. Pizza" />
+  <input disabled="true" matInput placeholder="Ex. Pizza" />
   <mat-icon matPrefix>sentiment_very_satisfied</mat-icon>
 </mat-form-field>
 
@@ -119,3 +119,7 @@
   <mat-checkbox class="example-margin">Check me!</mat-checkbox>
   <mat-checkbox class="example-margin" [disabled]="true">Disabled</mat-checkbox>
 </section>
+
+<h1>Buttons</h1>
+<button mat-flat-button color="primary">Primary</button>
+<button mat-stroked-button color="primary">Primary</button>
